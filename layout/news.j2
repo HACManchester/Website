@@ -1,5 +1,9 @@
 {% extends "base.j2" %}
 
+{% block title %}
+{{resource.meta.title}} - HAC:Manchester News
+{% endblock %}
+
 {% block postinfo %}
 <br/>Posted: {{ resource.meta.created.strftime('%a, %d %b %Y') }}
 {% endblock %}
