@@ -58,8 +58,8 @@ sorter:
 tagger:
     sorter: time
     archives:
-        blog:
-            source: blog
-            target: blog/tags
+        news:
+            source: news
+            target: news/tags
             template: tagged_posts.j2
             archive_extension: html

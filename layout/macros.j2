@@ -1,12 +1,14 @@
 {% macro render_excerpt(res, class=None) %}
 {% refer to res.url as post %}
-<article {{'class='~class if class }}>
+<article class="blog {{class if class}}">
+<div class="title" {% if res.meta.image %}style="background-image:url({{ media_url(res.meta.image) }})"{% endif %}>
 <h3><a href="{{ content_url(res.url) }}">{{ res.meta.title }}</a></h3>
-<a href="{{ content_url(res.url) }}">{{ post.image|markdown|typogrify }}</a>
-{{ post.excerpt|markdown|typogrify }}
-<time datetime="{{ res.meta.created.strftime('%Y-%m-%d') }}">
+<a href="{{ content_url(res.url) }}"><time datetime="{{ res.meta.created.strftime('%Y-%m-%d') }}">
     Posted: {{ res.meta.created.strftime('%a, %d %b %Y') }}
-</time>
+</time></a>
+</div>
+{{ post.excerpt|markdown|typogrify }}
+<a class="rm" href="{{ content_url(res.url) }}">Read More</a>
 </article>
 {% endmacro %}
 

@@ -38,13 +38,13 @@
 			</div>
 			<div class="col2">
 				{% block image %}
-					{% if resource.meta.image %}
-					<div class="banner" style="background-image:url({{ media_url(resource.meta.image) }})">
-						<h1>{{ resource.meta.title }}</h1>
-						<h2>{{ resource.meta.byline }}</h1>
-					</div>
-					{% endif %}
+				<div class="banner" {% if resource.meta.image %} style="background-image:url({{ media_url(resource.meta.image) }})"{% endif %}>
+					<h1>{{ resource.meta.title }}</h1>
+					<h2>{{ resource.meta.byline }}</h1>
+					{% block postinfo %}{% endblock %}
+				</div>
 				{% endblock image %}
+				{% block blognav %}{% endblock %}
 				{% filter markdown|typogrify -%}
 				{% mark main -%}
 				{% block main -%}{%- endblock %}
