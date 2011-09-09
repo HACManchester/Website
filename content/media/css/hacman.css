@@ -357,3 +357,41 @@ ul.blog li a.rm
 	margin-right: 10px;
 	margin-bottom: 8px;
 }
+
+ul.project
+{
+	margin: 0;
+	padding: 0;
+}
+
+ul.project li
+{
+	margin: 10px 0 30px 6%;
+	padding: 1%;
+	width: 39%;
+	display: block;
+	background-color: #333333;
+	float: left;
+}
+
+ul.project li p
+{
+	height: 5em;
+	overflow: hidden;
+}
+
+ul.project li div.title
+{
+	height: 150px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-image: url(../images/mediumlogo.png);
+}
+
+ul.project li a
+{
+	text-align: center;
+	display: block;
+}
+
+
