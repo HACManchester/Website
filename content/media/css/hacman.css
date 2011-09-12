@@ -394,4 +394,14 @@ ul.project li a
 	display: block;
 }
 
+div.projectimage
+{
+	width:250px;
+	float: right;
+	height: 180px;
+	background-repeat: no-repeat;
+	background-position: top center;
+	margin-left: 5px;
+}
+
 
