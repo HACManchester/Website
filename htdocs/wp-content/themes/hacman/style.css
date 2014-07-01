@@ -1,0 +1,574 @@
+/*
+Theme Name: HACMan Blog.
+Theme URI: http://hacman.org.uk
+Description: Web design for the HACMan blog.
+Version: 1.0
+Author: Bob Clough
+Author URI: http://thinkl33t.co.uk
+*/
+
+@import url(http://fonts.googleapis.com/css?family=Jura);
+
+/* BASIC LAYOUT */
+body 
+{
+	background-color: #eeeeee;
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+}
+
+a:link, a:hover, a:active, a:visited
+{
+	color: white;
+	text-decoration: none;
+}
+
+a:hover
+{
+	text-decoration: underline;
+	color: #e6e64c;
+}
+
+div#main  /* positioning */
+{
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -475px;
+	width: 950px;
+
+}
+
+div#main  /* colouring */
+{
+	background-color: black;
+	background-image: url("images/biglogo.png");
+	background-repeat: no-repeat;
+	background-position: 580px 10px;	
+}
+/*  END BASIC LAYOUT  */
+
+
+
+
+
+/*  HEADER  */
+div#main ul.menu
+{
+	height: 150px;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	width: 650px;
+	border-bottom: 1px solid white;
+	font-family: "Courier New", courier, monospace;
+	font-size: 0.8em;
+}
+
+div#main ul.menu li
+{
+	float: left;
+	border-right: 1px solid white;
+	list-style: none;
+}
+
+div#main ul.menu li a
+{
+	display: block;
+	height: 20px;
+	padding-top: 80px;
+	padding: 130px 20px 0 20px;
+	line-height: 100%;
+}
+
+div#main ul.menu a:hover
+{
+	text-decoration: none;
+	background-color: #e6e64c;
+	color: black;
+}
+/*   END HEADER   */
+
+
+
+
+/*   FOOTER   */
+div#footer
+{
+	clear: both;
+}
+
+div#footer ul.menu
+{
+	display: none;
+	border-top: 1px solid white;
+	border-bottom: none;
+	height: 1em;
+}
+
+div#footer ul.menu li a
+{
+	display: block;
+	padding: 0 20px 0 20px;
+}
+/*   END FOOTER   */
+
+
+
+
+/*   RIGHT MENU BAR   */
+div#sidebar
+{
+	width: 299px;
+	float: right;
+	border-left: 1px solid white;
+	padding-top: 160px;
+	text-align: center;
+	color: white;
+}
+
+div#sidebar hr
+{
+	border-top: 1px solid white;
+	border-bottom: none;
+	border-left: none;
+	border-right: none;
+}
+
+div#sidebar h1
+{
+	font-size: 1.4em;
+	margin: 0;
+	font-family: "Courier New", courier, monospace;
+}
+
+div#sidebar table.eme-calendar-table
+{
+	font-size: 9pt;
+	text-align: center;
+	width: 80%;
+	margin: 0 10% 15px 10%;
+	border-collapse: collapse;
+}
+
+div#sidebar table.eme-calendar-table a, div#sidebar table.eme-calendar-table a
+{
+	color: white;
+}
+
+div#sidebar table.eme-calendar-table a:hover, div#sidebar table.eme-calendar-table a:hover
+{
+	background-color: #e6e64c;
+	color: black;
+}
+
+div#sidebar table.eme-calendar-table thead td, div#sidebar table.eme-calendar-table tr.days-names td
+{
+	background-color: #666666;
+	color: white;
+	border: 1px solid #666;
+	margin: 0;
+	padding: 2px 0;
+}
+
+
+div#sidebar table.eme-calendar-table td
+{
+	color: #666666;
+	border: 1px solid #666;
+	margin: 0;
+	padding: 0;
+}
+
+div#sidebar table.eme-calendar-table td a
+{
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: #666666;
+}
+
+div#sidebar ul.contact 
+{
+	list-style-type: none;
+	width: 230px;
+	text-align: left;
+}
+
+div#sidebar ul.contact li
+{
+	margin-top: 16px;
+	font-size: 1.1em;
+	clear: both;
+}
+
+div#sidebar ul.contact h2
+{
+	font-size: 1.2em;
+	margin: 0;
+	font-family: courier, monospace;
+}
+
+div#sidebar ul.contact li#google_groups-2
+{
+	list-style-image: url(images/icons/sm/email.png);
+}
+
+div#sidebar ul.contact li#google_groups-2 div.gjoin
+{
+	text-align: right;
+}
+
+div#sidebar ul.contact li#google_groups-2 div.gjoin a
+{
+	font-size: 7pt;
+	color: #888;
+}
+
+
+div#sidebar ul.contact  li#google_groups-2 ul
+{
+	padding: 0;
+}
+
+div#sidebar ul.contact  li#google_groups-2 ul li
+{
+	list-style: none;
+	font-size: 9pt;
+	margin-top: 5px;
+	color: #ccc;
+	text-align: justify;
+}
+
+div#sidebar ul.contact  li#google_groups-2 ul a
+{
+	color: #ccc;
+}
+
+div#sidebar ul.contact li#google_groups-2 ul abbr
+{
+	color: #fff;
+}
+
+div#sidebar ul.contact li#latest_tweets_widget-2
+{
+	list-style-image: url(images/icons/sm/twitter.png);
+}
+
+
+div#sidebar ul.contact  li#latest_tweets_widget-2 ul
+{
+        padding: 0;
+}
+
+div#sidebar ul.contact  li#latest_tweets_widget-2 ul li
+{
+        list-style: none;
+        font-size: 9pt;
+        margin-top: 5px;
+        color: #ccc;
+        text-align: justify;
+	clear: both;
+}
+
+div#sidebar ul.contact  li#latest_tweets_widget-2 ul a
+{
+        color: #ccc;
+}
+
+div#sidebar ul.contact li#latest_tweets_widget-2 ul abbr
+{
+        color: #fff;
+}
+
+
+div#sidebar ul.contact li#latest_tweets_widget-2 ul li p.tweet-text
+{
+	padding: 0px 0px 2px 0px;
+	border-bottom: 1px solid #f0f0f0;
+	color: white;
+	margin-bottom: 0;
+}
+
+div#sidebar ul.contact li#latest_tweets_widget-2 ul li p.tweet-details
+{
+	float: left;
+	margin-top: 3px;
+	font-size: 0.9em;
+}
+
+div#sidebar ul.contact li#latest_tweets_widget-2 ul li p.tweet-details a
+{
+	color: grey;
+}
+
+div#sidebar div#primary ul
+{
+    padding: 0;
+}
+
+div#sidebar div#primary ul li
+{
+    list-style: none;
+    font-size: 9pt;
+    margin-top: 5px;
+    color: #ccc;
+    text-align: justify;
+	clear: both;
+}
+
+div#sidebar div#primary ul a
+{
+    color: #ccc;
+}
+
+div#sidebar div#primary ul abbr
+{
+    color: #fff;
+}
+
+div#sidebar div#primary ul li
+{
+	display: block;
+	clear: both;
+	padding: 0 40px 25px 40px;
+}
+
+div#sidebar div#primary ul li a
+{
+	padding: 0px 0px 2px 0px;
+	border-bottom: 1px solid #f0f0f0;
+	color: white;
+	margin-bottom: 0;
+	clear: both;
+	display: block;
+}
+
+div#sidebar div#primary ul li span.post-date
+{
+	float: left;
+	margin-top: 3px;
+	font-size: 0.9em;
+}
+
+div#sidebar div#primary ul li span.post-date a
+{
+	color: grey;
+}
+
+div#sidebar ul.contact li#dp-flickr-widget-2
+{
+	list-style-image: url(images/icons/sm/flickr.png);
+}
+
+div#sidebar ul.contact li#dp-flickr-widget-2 div.flickr-badges
+{
+	width: 300px;
+	margin-left: -40px;
+	margin-top: 10px;
+}
+
+div#sidebar ul.contact li#dp-flickr-widget-2 div.flickr-badges div.flickr_badge_image
+{
+	float: left;
+}
+
+/*   END RIGHT MENU BAR   */
+
+/*   CENTRAL COLUMN   */
+div#col2
+{
+	width: 650px;
+	background-color: white;
+	color: black;
+}
+
+div#col2 a:link, div#col2 a:hover, div#col2 a:active, div#col2 a:visited
+{
+	text-decoration: underline;
+	color: black;
+}
+
+div#col2 div.banner
+{
+	width: 100%;
+	height: 180px;
+	background-position: top right;
+	background-repeat: no-repeat;
+	background-color: #333333;
+	margin: 0;
+	padding: 0;
+	text-align: right;
+	font-family: "courier", monospace;
+}
+
+div#col2 div.banner h1, div#col2 div.banner h2
+{
+	margin: 0 5px 0 0;
+	padding: 0;
+}
+
+div#col2 div.banner h1
+{
+
+	font-size: 2.6em;
+}
+
+div#col2 div.banner h2
+{
+	font-size: 1.4em;
+}
+
+div#col2 p
+{
+	padding: 0 10px 0 10px;
+	text-align: justify;
+}
+
+div#col2 ul.blog
+{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+div#col2 ul.blog li
+{
+	border-bottom: 1px solid white;
+}
+
+div#col2 ul.blog li h3
+{
+	margin-top: 0;
+	margin-bottom: 3px;
+}
+
+div#col2 ul.blog li a
+{
+	display: block;
+}
+
+div#col2 ul.blog li div.title
+{
+	background-repeat: no-repeat;
+	background-color: #333333;
+	padding: 3px;
+	font-family: courier, monospace;
+	text-align: right;
+	font-weight: bold;
+}
+
+div#col2 div.page_image
+{
+	background-image: url(images/leds.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 650px;
+	height: 150px;
+	font-family: 'Jura', sans-serif;
+	color: white;
+}
+
+div#col2 div.page_top
+{
+        width: 650px;
+        height: 60px;
+        font-family: 'Jura', sans-serif;
+	background-color: #666666;
+}
+
+div#col2 div.page_image h1, div#col2 div.page_image h2,div#col2 div.page_top h1, div#col2 div.page_top h2
+{
+	text-align: right;
+	margin: 0;
+	padding-right: 10px;
+
+}
+
+div#col2 a.post-edit-link
+{
+	text-align: center;
+	display: block;
+	float: right;
+	padding: 5px 5px 5px 10px;
+	margin-left: 5px;
+	background-color: #666;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+div#col2 div.post
+{
+	padding-bottom: 25px;
+}
+
+div#col2 div.post .postMeta
+{
+	font-size: 0.8em;
+}
+
+div#col2 div.post .postMeta .date, div#col2 div.post .postMeta .time
+{
+	font-style: italic;
+}
+
+div#col2 div.wp-caption
+{
+    background-color: #eee;
+    border: 1px solid #999;
+    font-size: 0.8em;
+    text-align: center ! important;
+    font-style: italic;
+}
+
+div#col2 .aligncenter,
+div#col2 dl.aligncenter {
+	display: block;
+	margin-left: auto ! important;
+	margin-right: auto ! important;
+}
+
+div#col2 .alignleft {
+	float: left;
+}
+
+div#col2 .alignright {
+	float: right;
+}
+
+div#col2 .wp-caption {
+	border: 1px solid #ddd;
+	text-align: center;
+	background-color: #f3f3f3;
+	padding-top: 4px;
+	margin: 10px 0;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+/*   END CENTRAL COLUMN    */
+
+div.eme-location-map
+{
+	color: black;
+	width: 100%;
+}
+
+div.eme-location-map a
+{
+	color: black;
+}
+
+ul.eme_events_list
+{
+    clear: left;
+}
+
+ul.eme-calendar-day-event
+{
+    list-style: none;
+    padding: 0;
+    margin: 3px;
+}

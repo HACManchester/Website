@@ -1,0 +1,109 @@
+//
+// Variables
+// --------------------------------------------------
+
+// Colors
+// -------------------------
+
+@green:					#5cb85c;
+@green-light:			lighten( @green, 30% );
+@green-dark:			darken( @green, 15% );
+
+// Links
+// -------------------------
+
+// Green
+@link-color:			@green;
+
+// Typography
+// -------------------------
+
+@font-family-sans-serif:		'Roboto Condensed', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+@font-size-base:				16px;
+
+@line-height-base:				1.25; // 20/16
+@line-height-widget-heading:	2.2727;
+
+@font-path-base:				"fonts/";
+@roboto-condensed-path:			"@{font-path-base}roboto-condensed/";
+
+// Iconography
+// -------------------------
+
+@icon-font-path:				"lib/bootstrap/fonts/";
+
+// Components
+// -------------------------
+
+@component-active-bg:			@green;
+
+// Static home page
+// -------------------------
+
+@home-body-bg:					@green-dark;
+@home-text-color:				#fff;
+
+@home-font-size-base:			20px;
+@home-font-size-h1:				(@home-font-size-base * 3);
+
+// Forms
+// -------------------------
+
+@input-border-focus:			@green;
+
+
+// COMPONENT VARIABLES
+// --------------------------------------------------
+
+// Z-index
+// -------------------------
+
+@zindex-adminbar:				99999;
+
+// Grid system
+// --------------------------------------------------
+
+// Point at which the navbar stops collapsing
+@grid-float-breakpoint:    		@screen-desktop;
+
+// Navbar
+// -------------------------
+
+// Inverse navbar
+//
+// Inverse navbar search
+@navbar-inverse-search-border:			darken(@navbar-inverse-bg, 7%);
+
+// Green navbar
+//
+// Reset Green navbar basics
+@navbar-green-color:                      #cdbfe3;
+@navbar-green-bg:                         @green-dark;
+@navbar-green-border:                     darken(@navbar-green-bg, 10%);
+
+// Green navbar links
+@navbar-green-link-color:                 @green-light;
+@navbar-green-link-hover-color:           #fff;
+@navbar-green-link-hover-bg:              darken(@navbar-green-bg, 10%);
+@navbar-green-link-active-color:          @navbar-green-link-hover-color;
+@navbar-green-link-active-bg:             @navbar-green-link-hover-bg;
+@navbar-green-link-disabled-color:        #444;
+@navbar-green-link-disabled-bg:           transparent;
+
+// Green navbar brand label
+@navbar-green-brand-color:                @navbar-green-link-color;
+@navbar-green-brand-hover-color:          @navbar-green-link-hover-color;
+@navbar-green-brand-hover-bg:             transparent;
+
+// Green navbar search
+// Normal navbar needs no special styles or vars
+@navbar-green-search-bg:                  lighten(@navbar-green-bg, 25%);
+@navbar-green-search-bg-focus:            #fff;
+@navbar-green-search-border:              darken(@navbar-green-bg, 7%);
+@navbar-green-search-placeholder-color:   @navbar-green-color;
+
+// Green navbar toggle
+@navbar-green-toggle-hover-bg:            @navbar-green-link-hover-bg;
+@navbar-green-toggle-icon-bar-bg:         @navbar-green-link-color;
+@navbar-green-toggle-border-color:        @navbar-green-border;

@@ -1,0 +1,32 @@
+//
+// Header
+// --------------------------------------------------
+
+// Name, logo and site description
+#logo,
+#logo-sidebar {
+	margin-bottom:30px;
+	img {
+		margin-top:0;
+		margin-bottom:0;
+		max-height: 200px;
+	}
+}
+#logo-sidebar {
+	display:none;
+}
+@media ( min-width: @screen-md ) {
+	#logo-sidebar {
+		display:block;
+	}
+	#logo {
+		display:none;
+	}
+}
+
+// Header background-image
+#header-image {
+	margin:0 auto 1.5em;
+	.border-radius( 0 0 4px 4px );
+	.box-shadow(0 2px 2px @gray-dark);
+}
