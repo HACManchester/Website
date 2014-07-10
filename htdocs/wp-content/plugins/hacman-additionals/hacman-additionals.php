@@ -113,15 +113,14 @@ function hacman_update_rfid($args)
 
     $username   = $args[0];
     $password   = $args[1];
-    $user_id    = $args[2];
-    $rfid       = $args[3];
+    $rfid       = $args[2];
 
     //Authenticated?
     if ( !$user = $wp_xmlrpc_server->login($username, $password) ) {
         return $wp_xmlrpc_server->error;
     }
 
-    $retVal = update_user_meta($user_id, 'rfid_code', $rfid);
+    $retVal = update_user_meta($user->ID, 'rfid_code', $rfid);
     if (is_numeric($retVal)) {
         $retVal = true;
     }
