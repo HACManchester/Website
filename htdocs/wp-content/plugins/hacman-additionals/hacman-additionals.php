@@ -94,15 +94,17 @@ add_filter('xmlrpc_methods', function( $methods ) {
     return $methods;
 });
 
-add_filter('wp_mail_from', 'hacman_mailusers_wp_mail_from') ;
+add_filter('wp_mail_from', 'hacman_mailusers_wp_mail_from');
 add_filter('wp_mail_from_name', 'hacman_mailusers_wp_mail_from_name');
 
-function hacman_mailusers_wp_mail_from() {
-        return get_option('admin_email');
+function hacman_mailusers_wp_mail_from()
+{
+    return get_option('admin_email');
 }
 
-function hacman_mailusers_wp_mail_from_name() {
-        return get_option('blogname');
+function hacman_mailusers_wp_mail_from_name()
+{
+    return get_option('blogname');
 }
 
 function hacman_update_rfid($args)
@@ -111,12 +113,12 @@ function hacman_update_rfid($args)
     global $wp_xmlrpc_server;
     $wp_xmlrpc_server->escape($args);
 
-    $username   = $args[0];
-    $password   = $args[1];
-    $rfid       = $args[2];
+    $username = $args[0];
+    $password = $args[1];
+    $rfid = $args[2];
 
     //Authenticated?
-    if ( !$user = $wp_xmlrpc_server->login($username, $password) ) {
+    if (!$user = $wp_xmlrpc_server->login($username, $password)) {
         return $wp_xmlrpc_server->error;
     }
 
@@ -126,3 +128,56 @@ function hacman_update_rfid($args)
     }
     return $retVal;
 }
+
+function hacman_tabbify_profile($user)
+{
+    ?>
+    <script type="text/javascript">
+        jQuery(function($) {
+            var f = $('#your-profile');
+            var nav = $('<h2 class="nav-tab-wrapper"></h2>');
+            var tabMaker = function() {
+                var h3 = $(this),
+                        txt = h3.text(),
+                        id = 'tab-' + txt.replace(/[ ]/g, '-').toLowerCase()
+                        ;
+                nav.append('<a class="nav-tab" href="#' + id + '">' + txt + '</a>');
+                $(this).next('table').wrap('<div class="nav-tab-panel" id="' + id + '"></div>');
+                h3.remove();
+            };
+
+            f.children('h3:visible').each(tabMaker);
+            f.find('p').first().after(nav);
+            $('.nav-tab-panel').hide();
+
+           nav.on('click', 'a', function(event) {
+                event.preventDefault();
+                var context = $(this).closest('.nav-tab-wrapper').parent();
+                $('.nav-tab-wrapper a', context).removeClass('nav-tab-active');
+                $(this).addClass('nav-tab-active');
+                $('.nav-tab-panel', context).hide();
+                $($(this).attr('href'), context).show();
+            });
+
+            $('a[href=#tab-user-role-editor]').prependTo(nav).text('Membership & Emergency Details');
+            var roleTab = $('#tab-user-role-editor');
+            var roleTable = roleTab.find('table').first();
+            roleTable.find('tbody').prepend($('#tab-name .form-table tr:eq(1)'));
+            roleTable.appendTo('#tab-about-the-user');
+            roleTab.append('<table class="form-table"></table>');
+
+            // Make setting wp-tab-active optional.
+            $('.nav-tab-wrapper').each(function() {
+                if ($('.nav-tab-active', this).length) {
+                    $('.nav-tab-active', this).click();
+                } else {
+                    $('a', this).first().click();
+                }
+            });
+        });
+    </script>
+    <?php
+
+}
+
+add_action('edit_user_profile', 'hacman_tabbify_profile');
