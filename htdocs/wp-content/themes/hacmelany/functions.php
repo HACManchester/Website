@@ -33,3 +33,8 @@ function forceHTTPSforSideBar($logoArg)
     return str_replace('http:', 'https:', $logoArg);
 }
 add_filter('theme_mod_melany_logo', 'forceHTTPSforSideBar', 10, 1);
+
+function hacmelany_scripts() {
+    wp_enqueue_style( 'hacman-style', get_stylesheet_directory_uri() . '/main.css', array('custom-style') );
+}
+add_action( 'wp_enqueue_scripts', 'hacmelany_scripts' );
