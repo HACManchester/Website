@@ -1,0 +1,18 @@
+a, table.eme-calendar-table td.eventful a, table.eme-calendar-table td.eventful-today a {
+	color: #666666;
+}
+
+a:hover, a:focus {
+	color: #EBDB65;
+}
+
+.btn-success, .btn-success:hover {
+	background-color: #666666;
+	border-color: #666666;
+}
+
+.form-control:focus {
+	border-color: #EBDB65;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(235,219,101,0.6);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(235,219,101,0.6);
+}

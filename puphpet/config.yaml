@@ -1,16 +1,16 @@
 ---
 vagrantfile-local:
     vm:
-        box: debian-squeeze607-x64-vbox43
+        box: puphpet/debian75-x64
         box_url: puphpet/debian75-x64
         hostname: ''
-        memory: '512'
+        memory: '1024'
         cpus: '1'
         chosen_provider: virtualbox
         network:
             private_network: 192.0.2.100
             forwarded_port:
-                6a3BZqtOsHFU:
+                9O4nZMcseGfa:
                     host: '3306'
                     guest: '3306'
         post_up_message: ''
@@ -32,9 +32,9 @@ vagrantfile-local:
                     - '--hiera_config /vagrant/puphpet/puppet/hiera.yaml'
                     - '--parser future'
         synced_folder:
-            3P1LRWOgYXJR:
-                source: ./htdocs
-                target: /srv/hacman.local/public/htdocs
+            TyQfMAk4ZEEQ:
+                source: ./blog
+                target: /srv/hacman.local/blog
                 sync_type: default
                 rsync:
                     auto: 'false'
@@ -62,7 +62,7 @@ server:
 firewall:
     install: '1'
     rules:
-        wxzZZBDLPCfl:
+        LVcOUyXrseLU:
             port: '3306'
             priority: '100'
             proto: tcp
@@ -79,9 +79,9 @@ apache:
     modules:
         - rewrite
     vhosts:
-        I7SFlyOeKgEE:
+        9W4J00f9IqGl:
             servername: hacman.local
-            docroot: /srv/hacman.local/public/htdocs
+            docroot: /srv/hacman.local/blog/wordpress
             port: '80'
             setenv:
                 - 'APP_ENV dev'
@@ -101,7 +101,7 @@ nginx:
         proxy_buffer_size: 128k
         proxy_buffers: '4 256k'
     vhosts:
-        tmqWYGb7R1Gx:
+        5OwML6gsfEIX:
             server_name: awesome.dev
             server_aliases:
                 - www.awesome.dev
@@ -114,7 +114,7 @@ nginx:
                 - index.php
             envvars:
                 - 'APP_ENV dev'
-            engine: ''
+            engine: php
             ssl_cert: ''
             ssl_key: ''
 php:
@@ -176,7 +176,7 @@ mysql:
     root_password: reasondigital
     adminer: '1'
     databases:
-        M791SpxmvH4R:
+        YoYbfPTKokaG:
             grant:
                 - ALL
             name: hacman_wp

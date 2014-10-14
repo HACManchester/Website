@@ -1,0 +1,19 @@
+This tool will process the 
+
+This tool can invoked via the following methods:
+[linux,windows,mac] php salaries.phar [options]
+
+Options Available:
+---------------------
+-h, --help      shows this message
+--file          set the filename to be exported, by default this 
+                    is set to salaries.csv. Only the file part will
+                    be used.
+-m, --months    set the amount of months required for output, by default 
+                    this is set to 12.
+                    --months will always take precedence over -m 
+
+Source Extraction options:
+---------------------
+--extract       extract the phar src to src folder
+
